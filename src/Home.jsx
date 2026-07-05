@@ -1,35 +1,37 @@
+import { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Dither from "./components/Dither";
-import timelineHeading from "../assets/timeline-heading.png";
-import elementImg from "../assets/element.png";
-import smileyImg from "../assets/smiley.png";
-import sprayImg from "../assets/spray.png";
-import prizeHeading from "../assets/prize-heading.png";
-import lineLeft from "../assets/line-left.png";
-import lineRight from "../assets/line-right.png";
-import prizeCards from "../assets/prize-cards.png";
-import registrationHeading from "../assets/registration-heading.png";
-import posterFrame from "../assets/poster-frame.png";
-import registerBtn from "../assets/register-btn.png";
-import iconPrize from "../assets/icon-prize.png";
-import iconOffline from "../assets/icon-offline.png";
-import iconClock from "../assets/icon-clock.png";
-import iconParticipants from "../assets/icon-participants.png";
-import decorStickers from "../assets/decor-stickers.jpeg";
-import card1 from "../assets/card1.png";
-import card2 from "../assets/card2.png";
-import card3 from "../assets/card3.png";
-import card4 from "../assets/card4.png";
-import line from "../assets/line.png";
-import actslogo from "../assets/actslogo.png";
-import keepOut from "../assets/keepout.png";
-   const events = [
-  { side: "left",  name: "Registrations Open",  date: "28 / 06 / 2026", info: "Sign up on the official portal" },
-  { side: "right", name: "Team Formation",       date: "10 / 07 / 2026", info: "Build your squad of 2–4 members" },
-  { side: "left",  name: "Problem Statements",   date: "20 / 07 / 2026", info: "Problem sets released to all teams" },
-  { side: "right", name: "Round 1 — Prelims",    date: "01 / 08 / 2026", info: "Online qualifying round" },
-  { side: "left",  name: "Round 2 — Semis",      date: "10 / 08 / 2026", info: "Top 50 teams advance" },
-  { side: "right", name: "Grand Finale",         date: "16 / 08 / 2026", info: "Live event · ₹20 Lakh prize pool" },
+import timelineHeading from "./assets/timeline-heading.png";
+import elementImg from "./assets/element.png";
+import smileyImg from "./assets/smiley.png";
+import sprayImg from "./assets/spray.png";
+import prizeHeading from "./assets/prize-heading.png";
+import lineLeft from "./assets/line-left.png";
+import lineRight from "./assets/line-right.png";
+import prizeCards from "./assets/prize-cards.png";
+import registrationHeading from "./assets/registration-heading.png";
+import posterFrame from "./assets/poster-frame.png";
+import registerBtn from "./assets/register-btn.png";
+import iconPrize from "./assets/icon-prize.png";
+import iconOffline from "./assets/icon-offline.png";
+import iconClock from "./assets/icon-clock.png";
+import iconParticipants from "./assets/icon-participants.png";
+import decorStickers from "./assets/decor-stickers.jpeg";
+import card1 from "./assets/card1.png";
+import card2 from "./assets/card2.png";
+import card3 from "./assets/card3.png";
+import card4 from "./assets/card4.png";
+import line from "./assets/line.png";
+import actslogo from "./assets/actslogo.png";
+import keepOut from "./assets/keepout.png";
+
+const events = [
+  { side: "left", name: "Registrations Open", date: "28 / 06 / 2026", info: "Sign up on the official portal" },
+  { side: "right", name: "Team Formation", date: "10 / 07 / 2026", info: "Build your squad of 2–4 members" },
+  { side: "left", name: "Problem Statements", date: "20 / 07 / 2026", info: "Problem sets released to all teams" },
+  { side: "right", name: "Round 1 — Prelims", date: "01 / 08 / 2026", info: "Online qualifying round" },
+  { side: "left", name: "Round 2 — Semis", date: "10 / 08 / 2026", info: "Top 50 teams advance" },
+  { side: "right", name: "Grand Finale", date: "16 / 08 / 2026", info: "Live event · ₹20 Lakh prize pool" },
 ];
 
 // ===== Single event row =====
@@ -37,6 +39,7 @@ function EventRow({ event }) {
   const [lineVisible, setLineVisible] = useState(false);
   const [textVisible, setTextVisible] = useState(false);
   const rowRef = useRef(null);
+  const isLeft = event.side === "left";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,139 +55,9 @@ function EventRow({ event }) {
     if (rowRef.current) observer.observe(rowRef.current);
     return () => observer.disconnect();
   }, []);
-}
 
-  const isLeft = event.side === "left";
-
-
-export default function Home() {
   return (
-    <main className="relative min-h-screen w-full overflow-x-hidden text-white">
-
-      {/* ========================================================== */}
-      {/*                  GLOBAL WEBSITE BACKGROUND                 */}
-      {/* ========================================================== */}
-
-      <div className="fixed inset-0 -z-50">
-
-        <Dither
-          waveColor={[0.9372549019607843,0.9686274509803922,0.24705882352941178]}
-          disableAnimation={false}
-          enableMouseInteraction
-          mouseRadius={0.3}
-          colorNum={4}
-          waveAmplitude={0.3}
-          waveFrequency={3}
-          waveSpeed={0.05}
-        />
-
-      </div>
-
-      {/* ========================================================== */}
-      {/*                        DARK OVERLAY                        */}
-      {/* ========================================================== */}
-
-      <div className="fixed inset-0 bg-black/85 -z-40" />
-
-      {/* =============================================================== */}
-      {/*                            NAVBAR                              */}
-      {/* =============================================================== */}
-
-      <Navbar />
-
-
-
-      {/* =============================================================== */}
-      {/*                                                                */}
-      {/*                        HERO SECTION                            */}
-      {/*                                                                */}
-      {/* Assigned To :                                                  */}
-      {/*                                                                */}
-      {/* Instructions:                                                  */}
-      {/* 1. Write ONLY inside this section.                             */}
-      {/* 2. Do not modify any code outside this block.                  */}
-      {/* 3. Use relative positioning whenever possible.                 */}
-      {/* 4. Do NOT add another background.                             */}
-      {/* 5. Keep the design responsive.                                */}
-      {/*                                                                */}
-      {/* =============================================================== */}
-
-      <section id="hero" className="relative w-full">
-
-        {/* ================= HERO START ================= */}
-
-
-
-        {/* ================= HERO END =================== */}
-
-      </section>
-
-
-
-      {/* =============================================================== */}
-      {/*                                                                */}
-      {/*                      ABOUT BRAINWAVE                           */}
-      {/*                                                                */}
-      {/* =============================================================== */}
-
-      <section id="about" className="relative w-full">
-
-        {/* ================= ABOUT START ================= */}
-
-
-
-        {/* ================= ABOUT END =================== */}
-
-      </section>
-
-
-
-      {/* =============================================================== */}
-      {/*                                                                */}
-      {/*                    HIGHLIGHTS / GALLERY                        */}
-      {/*                                                                */}
-      {/* =============================================================== */}
-
-      <section id="gallery" className="relative w-full">
-
-        {/* =============== GALLERY START =============== */}
-
-
-
-        {/* ================ GALLERY END ================= */}
-
-      </section>
-
-
-
-      {/* =============================================================== */}
-      {/*                                                                */}
-      {/*                      COUNTDOWN TIMER                           */}
-      {/*                                                                */}
-      {/* =============================================================== */}
-
-      <section id="countdown" className="relative w-full">
-
-        {/* ============== COUNTDOWN START ============== */}
-
-
-
-        {/* =============== COUNTDOWN END =============== */}
-
-      </section>
-
-
-
-      {/* =============================================================== */}
-      {/*                                                                */}
-      {/*                         TIMELINE                              */}
-      {/*                                                                */}
-      {/* =============================================================== */}
-
-      <section id="timeline" className="relative w-full">
-
     <div ref={rowRef} style={{ position: "relative", display: "flex", alignItems: "center", minHeight: "140px" }}>
-
       {/* Dot */}
       <div style={{
         position: "absolute", left: "50%", top: "50%",
@@ -229,313 +102,404 @@ export default function Home() {
           {event.info}
         </p>
       </div>
-
     </div>
-  
-<section/>
+  );
+}
 
-// ===== Main page =====
-export default function Timeline() {
+// ===== Timeline Section =====
+function TimelineSection() {
   return (
-    <div style={{
-      position: "relative",
-      width: "100%",
-      backgroundColor: "#060606",
-      minHeight: "100vh",
-      overflowX: "hidden",
-      paddingBottom: "120px",
-    }}>
-
-      {/* Google Fonts */}
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap" />
-
-      {/* ── BACKGROUND ELEMENTS ── */}
-
-      {/* White brush/slash — right side, middle of page */}
-      <img src={elementImg} alt="" style={{
-        position: "absolute",
-        top: "20%",
-        right: "-30px",        /* change right value to move left or right */
-        width: "280px",        /* change to resize */
-        opacity: 0.55,         /* change 0 to 1 for full brightness */
-        pointerEvents: "none",
-        userSelect: "none",
-        zIndex: 1,
-      }} />
-
-      {/* Smiley — bottom left, half peeking out */}
-      <img src={smileyImg} alt="" style={{
-        position: "absolute",
-        bottom: "60px",        /* change to move up or down */
-        left: "-35px",         /* negative = peek from edge */
-        width: "140px",        /* change to resize */
-        pointerEvents: "none",
-        userSelect: "none",
-        zIndex: 1,
-      }} />
-
-      {/* Spray can — bottom center-right */}
-      <img src={sprayImg} alt="" style={{
-        position: "absolute",
-        bottom: "10px",        /* change to move up or down */
-        right: "250px",         /* change to move left or right */
-        width: "130px",        /* change to resize */
-        pointerEvents: "none",
-        userSelect: "none",
-        zIndex: 1,
-      }} />
-
-      {/* ── HEADING ── */}
-      <div style={{ textAlign: "center", paddingTop: "60px", paddingBottom: "40px", position: "relative", zIndex: 2 }}>
-        <img
-          src={timelineHeading}
-          alt="TIMELINE"
-          style={{ width: "min(700px, 90vw)", margin: "0 auto", display: "block" }}
-        />
-      </div>
-
-      {/* ── VERTICAL SPINE LINE ── */}
-      <div style={{
-        position: "absolute",
-        left: "50%",
-        transform: "translateX(-50%)",
-        top: "160px",
-        bottom: "100px",
-        width: "2px",
-        backgroundColor: "rgba(200,255,0,0.3)",
-        zIndex: 2,
-      }} />
-
-      {/* ── EVENT ROWS ── */}
+    <section id="timeline" className="relative w-full">
       <div style={{
         position: "relative",
-        maxWidth: "900px",
-        margin: "0 auto",
-        padding: "0 20px",
-        zIndex: 3,             /* above background images */
-      }}>
-        {events.map((event, index) => (
-          <EventRow key={index} event={event} />
-        ))}
-      </div>
-
-    </div>
-  );
-}
-
-      </section>
-
-
-
-      {/* =============================================================== */}
-      {/*                                                                */}
-      {/*                        PRIZE POOL                             */}
-      {/*                                                                */}
-      {/* =============================================================== */}
-
-      <section id="prizes" className="relative w-full">
-
-       export default function Prize() {
-  return (
-    <div style={{
-      backgroundColor: "#060606",
-  width: "100%",
-minHeight: "100vh",
-backgroundColor: "#060606",
-display: "flex",
-flexDirection: "column",
-alignItems: "center",
-justifyContent: "center",
-padding: "40px 20px",
-boxSizing: "border-box",
-overflow: "hidden",
-    }}>
-
-      {/* ── HEADING ROW: line + PRIZE POOL + line ── */}
-      <div style={{
-        display: "flex",
-        alignItems: "center",
         width: "100%",
-        maxWidth: "1200px",
-        padding: "0",
-        gap: "12px",
-        boxSizing: "border-box",
-        marginBottom: "40px",
+        backgroundColor: "#060606",
+        minHeight: "100vh",
+        overflowX: "hidden",
+        paddingBottom: "120px",
       }}>
-        {/* Left line */}
-        <img src={lineLeft} alt="" style={{
-          flex: 1, minWidth: 0, height: "12px", objectFit: "fill",
+
+        {/* Google Fonts */}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap" />
+
+        {/* ── BACKGROUND ELEMENTS ── */}
+
+        {/* White brush/slash — right side, middle of page */}
+        <img src={elementImg} alt="" style={{
+          position: "absolute",
+          top: "20%",
+          right: "-30px",
+          width: "280px",
+          opacity: 0.55,
+          pointerEvents: "none",
+          userSelect: "none",
+          zIndex: 1,
         }} />
 
-        {/* Heading */}
-        <img src={prizeHeading} alt="PRIZE POOL" style={{
-          width: "clamp(180px, 28vw, 340px)",
-          flexShrink: 0,
-          height: "auto",
+        {/* Smiley — bottom left, half peeking out */}
+        <img src={smileyImg} alt="" style={{
+          position: "absolute",
+          bottom: "60px",
+          left: "-35px",
+          width: "140px",
+          pointerEvents: "none",
+          userSelect: "none",
+          zIndex: 1,
         }} />
 
-        {/* Right line */}
-        <img src={lineRight} alt="" style={{
-          flex: 1, minWidth: 0, height: "12px", objectFit: "fill",
+        {/* Spray can — bottom center-right */}
+        <img src={sprayImg} alt="" style={{
+          position: "absolute",
+          bottom: "10px",
+          right: "250px",
+          width: "130px",
+          pointerEvents: "none",
+          userSelect: "none",
+          zIndex: 1,
         }} />
-      </div>
 
-      {/* ── PRIZE CARDS ── */}
-      <div style={{
-        width: "100%",
-        maxWidth: "1200px",
-        display: "flex",
-        justifyContent: "center",
-        padding: "0 ",
-        boxSizing: "border-box",
-      }}>
-        <img src={prizeCards} alt="Prize Cards" style={{
-          width: "100%",
-          maxWidth:"950px",
-          height: "auto",
-          display:"block",
+        {/* ── HEADING ── */}
+        <div style={{ textAlign: "center", paddingTop: "60px", paddingBottom: "60px", position: "relative", zIndex: 2 }}>
+          <img
+            src={timelineHeading}
+            alt="TIMELINE"
+            style={{ width: "min(700px, 90vw)", margin: "0 auto", display: "block" }}
+          />
+        </div>
+
+        {/* ── VERTICAL SPINE LINE ── */}
+        <div style={{
+          position: "absolute",
+          left: "50%",
+          transform: "translateX(-50%)",
+          top: "160px",
+          bottom: "100px",
+          width: "2px",
+          backgroundColor: "rgba(200,255,0,0.3)",
+          zIndex: 2,
         }} />
-      </div>
 
-    </div>
-  );
-}
-
-
-      </section>
-
-
-
-      {/* =============================================================== */}
-      {/*                                                                */}
-      {/*                       REGISTRATION                            */}
-      {/*                                                                */}
-      {/* =============================================================== */}
-
-      <section id="register" className="relative w-full">
-
-        const REGISTER_LINK = "https://www.ipu.ac.in/";
-
-function Registration() {
-  return (
-    <div className="relative min-h-screen w-full bg-black overflow-hidden">
-      <img
-        src={decorStickers}
-        alt=""
-        className="absolute bottom-0 left-0 w-full object-cover pointer-events-none select-none"
-      />
-
-      
-      <div className="relative z-10 flex justify-center pt-6">
-        <img
-          src={registrationHeading}
-          alt="Registration"
-          className="w-[700px] max-w-[90%]"
-        />
-      </div>
-
-    
-      <div className="relative z-10 flex items-center justify-center gap-10 mt-28">
-
-                       /*LEFT*/
-        <div className="flex flex-col items-center gap-6">
-
-  {/* Register Button */}
-  <a href={REGISTER_LINK} target="_blank" rel="noreferrer">
-    <img
-      src={registerBtn}
-      alt="Register"
-      className="w-[300px] hover:scale-110 transition"
-    />
-  </a>
-
-  {/* Poster */}
-  <div
-    className="relative w-[320px] h-[320px] bg-center bg-cover flex items-center justify-center"
-    style={{ backgroundImage: `url(${posterFrame})` }}
-  >
-    <img
-      src={actslogo}
-      alt="Poster"
-      className="w-[240px] h-[240px] object-contain"
-    />
-  </div>
-
-</div>
-
-                                             /* LINE */
-        <img
-          src={line}
-          alt="line"
-          className="h-[420px] w-auto"
-        />
-
-                                                        /* RIGHT SIDE */
-        <div className="grid grid-cols-2 gap-4">
-
-          <div
-            className="relative w-[200px] h-[180px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${card1})` }}
-          >
-            <img
-              src={iconPrize}
-              alt=""
-              className="absolute -top-10 left-1/2 -translate-x-1/2 w-28"
-            />
-          </div>
-
-          <div
-            className="relative w-[200px] h-[180px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${card2})` }}
-          >
-            <img
-              src={iconOffline}
-              alt=""
-              className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
-            />
-          </div>
-
-          <div
-            className="relative w-[200px] h-[180px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${card3})` }}
-          >
-            <img
-              src={iconClock}
-              alt=""
-              className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
-            />
-          </div>
-
-          <div
-            className="relative w-[200px] h-[180px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${card4})` }}
-          >
-            <img
-              src={iconParticipants}
-              alt=""
-              className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
-            />
-          </div>
+        {/* ── EVENT ROWS ── */}
+        <div style={{
+          position: "relative",
+          maxWidth: "900px",
+          margin: "0 auto",
+          padding: "0 20px",
+          zIndex: 3,
+        }}>
+          {events.map((event, index) => (
+            <EventRow key={index} event={event} />
+          ))}
         </div>
       </div>
-
-      {/* Bottom Keep Out Strip */}
-<div className="absolute bottom-0 left-0 w-full">
-  <img
-    src={keepOut}
-    alt="Keep Out"
-    className="w-full object-cover"
-  />
-</div>
-    </div>
+    </section>
   );
 }
 
-export default Registration;
+// ===== Prize Pool Section =====
+function PrizeSection() {
+  return (
+    <section id="prizes" className="relative w-full">
+      <div style={{
+        backgroundColor: "#060606",
+        width: "100%",
+        minHeight: "100vh",
+        backgroundColor: "#060606",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "40px 20px",
+        boxSizing: "border-box",
+        overflow: "hidden",
+      }}>
+
+        {/* ── HEADING ROW: line + PRIZE POOL + line ── */}
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          width: "100%",
+          maxWidth: "1200px",
+          padding: "0",
+          gap: "12px",
+          boxSizing: "border-box",
+          marginBottom: "40px",
+        }}>
+          {/* Left line */}
+          <img src={lineLeft} alt="" style={{
+            flex: 1, minWidth: 0, height: "12px", objectFit: "fill",
+          }} />
+
+          {/* Heading */}
+          <img src={prizeHeading} alt="PRIZE POOL" style={{
+            width: "clamp(180px, 28vw, 340px)",
+            flexShrink: 0,
+            height: "auto",
+          }} />
+
+          {/* Right line */}
+          <img src={lineRight} alt="" style={{
+            flex: 1, minWidth: 0, height: "12px", objectFit: "fill",
+          }} />
+        </div>
+
+        {/* ── PRIZE CARDS ── */}
+        <div style={{
+          width: "100%",
+          maxWidth: "1200px",
+          display: "flex",
+          justifyContent: "center",
+          padding: "0 ",
+          boxSizing: "border-box",
+        }}>
+          <img src={prizeCards} alt="Prize Cards" style={{
+            width: "100%",
+            maxWidth: "950px",
+            height: "auto",
+            display: "block",
+          }} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ===== Registration Section =====
+function RegistrationSection() {
+  const REGISTER_LINK = "https://www.ipu.ac.in/";
+
+  return (
+    <section id="register" className="relative w-full">
+      <div className="relative min-h-screen w-full bg-black overflow-hidden">
+        <img
+          src={decorStickers}
+          alt=""
+          className="absolute bottom-0 left-0 w-full object-cover pointer-events-none select-none"
+        />
+
+        <div className="relative z-10 flex justify-center pt-6">
+          <img
+            src={registrationHeading}
+            alt="Registration"
+            className="w-[700px] max-w-[90%]"
+          />
+        </div>
+
+        <div className="relative z-10 flex items-center justify-center gap-10 mt-28">
+          {/* LEFT */}
+          <div className="flex flex-col items-center gap-6">
+            {/* Register Button */}
+            <a href={REGISTER_LINK} target="_blank" rel="noreferrer">
+              <img
+                src={registerBtn}
+                alt="Register"
+                className="w-[300px] hover:scale-110 transition"
+              />
+            </a>
+
+            {/* Poster */}
+            <div
+              className="relative w-[320px] h-[320px] bg-center bg-cover flex items-center justify-center"
+              style={{ backgroundImage: `url(${posterFrame})` }}
+            >
+              <img
+                src={actslogo}
+                alt="Poster"
+                className="w-[240px] h-[240px] object-contain"
+              />
+            </div>
+          </div>
+
+          {/* LINE */}
+          <img
+            src={line}
+            alt="line"
+            className="h-[420px] w-auto"
+          />
+
+          {/* RIGHT SIDE */}
+          <div className="grid grid-cols-2 gap-4">
+
+            <div
+              className="relative w-[200px] h-[180px] bg-cover bg-center"
+              style={{ backgroundImage: `url(${card1})` }}
+            >
+              <img
+                src={iconPrize}
+                alt=""
+                className="absolute -top-10 left-1/2 -translate-x-1/2 w-28"
+              />
+            </div>
+
+            <div
+              className="relative w-[200px] h-[180px] bg-cover bg-center"
+              style={{ backgroundImage: `url(${card2})` }}
+            >
+              <img
+                src={iconOffline}
+                alt=""
+                className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
+              />
+            </div>
+
+            <div
+              className="relative w-[200px] h-[180px] bg-cover bg-center"
+              style={{ backgroundImage: `url(${card3})` }}
+            >
+              <img
+                src={iconClock}
+                alt=""
+                className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
+              />
+            </div>
+
+            <div
+              className="relative w-[200px] h-[180px] bg-cover bg-center"
+              style={{ backgroundImage: `url(${card4})` }}
+            >
+              <img
+                src={iconParticipants}
+                alt=""
+                className="absolute -top-8 left-1/2 -translate-x-1/2 w-28"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Keep Out Strip */}
+        <div className="absolute bottom-0 left-0 w-full">
+          <img
+            src={keepOut}
+            alt="Keep Out"
+            className="w-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ===== Main page =====
+export default function Home() {
+  return (
+    <main className="relative min-h-screen w-full overflow-x-hidden text-white">
+
+      {/* ========================================================== */}
+      {/*                  GLOBAL WEBSITE BACKGROUND                 */}
+      {/* ========================================================== */}
+
+      <div className="fixed inset-0 -z-50">
+
+        <Dither
+          waveColor={[0.9372549019607843, 0.9686274509803922, 0.24705882352941178]}
+          disableAnimation={false}
+          enableMouseInteraction
+          mouseRadius={0.3}
+          colorNum={4}
+          waveAmplitude={0.3}
+          waveFrequency={3}
+          waveSpeed={0.05}
+        />
+
+      </div>
+
+      {/* ========================================================== */}
+      {/*                        DARK OVERLAY                        */}
+      {/* ========================================================== */}
+
+      <div className="fixed inset-0 bg-black/85 -z-40" />
+
+      {/* =============================================================== */}
+      {/*                            NAVBAR                              */}
+      {/* =============================================================== */}
+
+      <Navbar />
+
+
+      {/* =============================================================== */}
+      {/*                                                                */}
+      {/*                        HERO SECTION                            */}
+      {/*                                                                */}
+      {/* Assigned To :                                                  */}
+      {/*                                                                */}
+      {/* Instructions:                                                  */}
+      {/* 1. Write ONLY inside this section.                             */}
+      {/* 2. Do not modify any code outside this block.                  */}
+      {/* 3. Use relative positioning whenever possible.                 */}
+      {/* 4. Do NOT add another background.                             */}
+      {/* 5. Keep the design responsive.                                */}
+      {/*                                                                */}
+      {/* =============================================================== */}
+
+      <section id="hero" className="relative w-full">
+
+        {/* ================= HERO START ================= */}
+
+
+
+        {/* ================= HERO END =================== */}
 
       </section>
 
 
+      {/* =============================================================== */}
+      {/*                                                                */}
+      {/*                      ABOUT BRAINWAVE                           */}
+      {/*                                                                */}
+      {/* =============================================================== */}
+
+      <section id="about" className="relative w-full">
+
+        {/* ================= ABOUT START ================= */}
+
+
+
+        {/* ================= ABOUT END =================== */}
+
+      </section>
+
+
+      {/* =============================================================== */}
+      {/*                                                                */}
+      {/*                    HIGHLIGHTS / GALLERY                        */}
+      {/*                                                                */}
+      {/* =============================================================== */}
+
+      <section id="gallery" className="relative w-full">
+
+        {/* =============== GALLERY START =============== */}
+
+
+
+        {/* ================ GALLERY END ================= */}
+
+      </section>
+
+
+      {/* =============================================================== */}
+      {/*                                                                */}
+      {/*                      COUNTDOWN TIMER                           */}
+      {/*                                                                */}
+      {/* =============================================================== */}
+
+      <section id="countdown" className="relative w-full">
+
+        {/* ============== COUNTDOWN START ============== */}
+
+
+
+        {/* =============== COUNTDOWN END =============== */}
+
+      </section>
+
+      {/* TIMELINE SECTION */}
+      <TimelineSection />
+
+      {/* PRIZE POOL SECTION */}
+      <PrizeSection />
+
+      {/* REGISTRATION SECTION */}
+      <RegistrationSection />
 
       {/* =============================================================== */}
       {/*                                                                */}
@@ -552,7 +516,6 @@ export default Registration;
         {/* ================ SPONSORS END =============== */}
 
       </section>
-
 
 
       {/* =============================================================== */}
@@ -572,7 +535,6 @@ export default Registration;
       </section>
 
 
-
       {/* =============================================================== */}
       {/*                                                                */}
       {/*                            FAQ                                */}
@@ -588,7 +550,6 @@ export default Registration;
         {/* =================== FAQ END ================= */}
 
       </section>
-
 
 
       {/* =============================================================== */}
