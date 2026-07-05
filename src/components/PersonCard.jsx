@@ -5,7 +5,10 @@ export default function PersonCard({ person }) {
     <div
       className="
         w-[180px]
-        h-[285px]
+        h-[290px]
+
+        sm:w-[180px]
+        sm:h-[285px]
 
         md:w-[210px]
         md:h-[325px]
@@ -15,9 +18,12 @@ export default function PersonCard({ person }) {
 
         rounded-[18px]
         border-2
-        border-lime-300
+        border-black
 
-        bg-[#0B0B0B]
+        bg-linear-to-r
+        from-[#DFFF4F]
+        via-[#F5FFD8]
+        to-[#FFFDF2]
 
         p-3
 
@@ -41,7 +47,7 @@ export default function PersonCard({ person }) {
             overflow-hidden
 
             border
-            border-lime-300/60
+            border-black
           "
         >
           <img
@@ -68,8 +74,10 @@ export default function PersonCard({ person }) {
 
             -translate-x-1/2
 
-            px-4
-            py-1
+            px-3
+            py-0.5
+            md:px-4
+            md:py-1
 
             rounded-full
 
@@ -79,7 +87,8 @@ export default function PersonCard({ person }) {
             border-lime-300
 
             text-white
-            text-[11px]
+            text-[10px]
+            md:text-[11px]
             font-medium
 
             whitespace-nowrap
@@ -109,11 +118,11 @@ export default function PersonCard({ person }) {
           className="
             text-center
 
-            text-lime-300
+            text-black
 
             font-bold
-
-            text-lg
+            text-m
+            md:text-lg
 
             leading-tight
           "
@@ -124,24 +133,28 @@ export default function PersonCard({ person }) {
         {/* Job + LinkedIn */}
 
         <div
-          className="
-            mt-auto
+            className="
+                mt-auto
 
-            flex
-            justify-between
-            items-end
+                flex
+                items-end
+                justify-between
 
-            gap-3
-          "
+                gap-2
+            "
         >
 
           <p
             className="
-              text-[11px]
-              leading-snug
+                  flex-1
+                  text-[13px]
+                  md:text-[16px]
+                  leading-5
 
-              text-zinc-300
-            "
+                  font-medium
+
+                  text-black/80
+              "
           >
             {person.description}
           </p>
@@ -151,13 +164,18 @@ export default function PersonCard({ person }) {
               href={person.linkedin}
               target="_blank"
               rel="noreferrer"
+              className="shrink-0"
             >
               <img
                 src={linkedinIcon}
                 alt="LinkedIn"
                 className="
-                  w-6
-                  h-6
+                  w-5
+                  h-5
+                  md:w-7
+                  md:h-7
+
+                  object-contain
 
                   opacity-80
                   hover:opacity-100

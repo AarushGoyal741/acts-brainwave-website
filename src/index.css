@@ -46,3 +46,10 @@ body {
     }
 }
 
+.splide__track{
+    overflow:visible;
+}
+
+.splide__list{
+    padding:20px 0;
+}

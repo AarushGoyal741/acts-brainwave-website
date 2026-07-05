@@ -1,4 +1,11 @@
 import googleLogo from "../assets/sponsorsandmentors/googleLogo.webp";
+import JingDongPFP from "../assets/sponsorsandmentors/JingDong.png"
+import ArpitSabherwalPFP from "../assets/sponsorsandmentors/ArpitSabherwal.png"
+import BrajeshKumarShrivastavaPFP from "../assets/sponsorsandmentors/BrajeshKumarShrivastava.jpg"
+import MariiaSilichPFP from "../assets/sponsorsandmentors/MariiaSilich.jpg"
+import VladislavKuznetsovPFP from "../assets/sponsorsandmentors/VladislavKuznetsov.jpg"
+import ReshmikaDhandapaniPFP from "../assets/sponsorsandmentors/ReshmikaDhandapani.jpg"
+
 
 export const sponsors = [
         { id: 1, name: "Google", logo: googleLogo },
@@ -16,66 +23,51 @@ export const sponsors = [
     export const people = [
   {
     id: 1,
-    name: "Aarav Mehta",
+    name: "Jing Dong",
     role: "Mentor",
-    description: "Software Engineer | Google",
-    image: "https://picsum.photos/300/400?random=1",
-    linkedin: "#",
+    description: "Artist & Software engineer | Instagran (Meta)",
+    image: JingDongPFP,
+    linkedin: "https://www.linkedin.com/in/jing-dong-909400184/",
   },
   {
     id: 2,
-    name: "Priya Sharma",
-    role: "Judge",
-    description: "ML Engineer | Microsoft",
-    image: "https://picsum.photos/300/400?random=2",
-    linkedin: "#",
+    name: "Arpit Sabherwal",
+    role: "Mentor",
+    description: "Senior Software Engineer | Plaid",
+    image: ArpitSabherwalPFP,
+    linkedin: "https://www.linkedin.com/in/arpitsabherwal/",
   },
   {
     id: 3,
-    name: "Rohan Kapoor",
+    name: "Brajesh Kumar Shrivastava",
     role: "Mentor",
-    description: "Product Engineer | Amazon",
-    image: "https://picsum.photos/300/400?random=3",
-    linkedin: "#",
+    description: "Senior Staff Engineer | Nutanix Inc",
+    image: BrajeshKumarShrivastavaPFP,
+    linkedin: "https://www.linkedin.com/in/brajesh-shrivastava-3770b08/",
   },
   {
     id: 4,
-    name: "Neha Verma",
-    role: "Judge",
-    description: "Senior Developer | Adobe",
-    image: "https://picsum.photos/300/400?random=4",
-    linkedin: "#",
+    name: "Mariia Silich",
+    role: "Mentor",
+    description: "AR Designer | Snap Inc.",
+    image: MariiaSilichPFP,
+    linkedin: "https://www.linkedin.com/in/mariia-silich/",
   },
   {
     id: 5,
-    name: "Arjun Singh",
+    name: "Vladislav Kuznetsov",
     role: "Mentor",
-    description: "Cloud Architect | NVIDIA",
-    image: "https://picsum.photos/300/400?random=5",
-    linkedin: "#",
+    description: "Co-Founder & CTO | BlueCore Studios",
+    image: VladislavKuznetsovPFP,
+    linkedin: "https://www.linkedin.com/in/vl-kuz/",
   },
   {
     id: 6,
-    name: "Kavya Iyer",
-    role: "Judge",
-    description: "AI Researcher | Meta",
-    image: "https://picsum.photos/300/400?random=6",
-    linkedin: "#",
-  },
-  {
-    id: 7,
-    name: "Rahul Nair",
+    name: "Reshmika Dhandapani",
     role: "Mentor",
-    description: "Backend Engineer | Netflix",
-    image: "https://picsum.photos/300/400?random=7",
-    linkedin: "#",
+    description: "Product Manager | Motorola Solutions",
+    image: ReshmikaDhandapaniPFP,
+    linkedin: "https://www.linkedin.com/in/reshmika-dhandapani/",
   },
-  {
-    id: 8,
-    name: "Sneha Gupta",
-    role: "Judge",
-    description: "Security Engineer | Apple",
-    image: "https://picsum.photos/300/400?random=8",
-    linkedin: "#",
-  },
+  
 ];
