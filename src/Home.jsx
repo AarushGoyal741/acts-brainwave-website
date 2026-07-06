@@ -1,16 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import timelineHeading from "./assets/timeline-heading.png";
-import elementImg from "./assets/element.png";
 import smileyImg from "./assets/smiley.png";
 import sprayImg from "./assets/spray.png";
 import prizeHeading from "./assets/prize-heading.png";
 import lineLeft from "./assets/line-left.png";
 import lineRight from "./assets/line-right.png";
-import box1 from "../assets/box1.png";
-import box2 from "../assets/box2.png";
-import box3 from "../assets/box3.png";
-import box4 from "../assets/box4.png";
+import box1 from "./assets/box1.png";
+import box2 from "./assets/box2.png";
+import box3 from "./assets/box3.png";
+import box4 from "./assets/box4.png";
 
 import registrationHeading from "./assets/registration-heading.png";
 import posterFrame from "./assets/poster-frame.png";
@@ -78,12 +77,12 @@ import Tracks from "./components/Tracks.jsx";
 
 
 const events = [
-  { side: "left", name: "Registrations Open", date: "28 / 06 / 2026", info: "Sign up on the official portal" },
-  { side: "right", name: "Team Formation", date: "10 / 07 / 2026", info: "Build your squad of 2–4 members" },
-  { side: "left", name: "Problem Statements", date: "20 / 07 / 2026", info: "Problem sets released to all teams" },
-  { side: "right", name: "Round 1 — Prelims", date: "01 / 08 / 2026", info: "Online qualifying round" },
-  { side: "left", name: "Round 2 — Semis", date: "10 / 08 / 2026", info: "Top 50 teams advance" },
-  { side: "right", name: "Grand Finale", date: "16 / 08 / 2026", info: "Live event · ₹20 Lakh prize pool" },
+  { side: "left", name: "Registrations Open", date: "28 / 06 / 2026" },
+  { side: "right", name: "Team Formation", date: "10 / 07 / 2026" },
+  { side: "left", name: "Problem Statements", date: "20 / 07 / 2026" },
+  { side: "right", name: "Round 1 — Prelims", date: "01 / 08 / 2026"},
+  { side: "left", name: "Round 2 — Semis", date: "10 / 08 / 2026" },
+  { side: "right", name: "Grand Finale", date: "16 / 08 / 2026" },
 ];
 
 // ===== Single event row =====
@@ -151,21 +150,18 @@ function EventRow({ event }) {
         <p style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.75rem", color: "#c8ff00", letterSpacing: "2px", margin: "2px 0 0" }}>
           {event.date}
         </p>
-        <p style={{ fontSize: "0.7rem", color: "rgba(255,255,255,0.4)", margin: "3px 0 0" }}>
-          {event.info}
-        </p>
       </div>
     </div>
   );
 }
 
 // ===== Timeline Section =====
-function Timeline() {
+function TimelineSection() {
   return (
     <div style={{
       position: "relative",
       width: "100%",
-      backgroundColor: "#060606",
+     
       minHeight: "100vh",
       overflowX: "hidden",
       paddingBottom: "120px",
@@ -176,17 +172,7 @@ function Timeline() {
 
       {/* ── BACKGROUND ELEMENTS ── */}
 
-      {/* White brush/slash — right side, middle of page */}
-      <img src={elementImg} alt="" style={{
-        position: "absolute",
-        top: "20%",
-        right: "-30px",        /* change right value to move left or right */
-        width: "280px",        /* change to resize */
-        opacity: 0.55,         /* change 0 to 1 for full brightness */
-        pointerEvents: "none",
-        userSelect: "none",
-        zIndex: 1,
-      }} />
+  
 
       {/* Smiley — bottom left, half peeking out */}
       <img src={smileyImg} alt="" style={{
@@ -249,13 +235,13 @@ function Timeline() {
 }
 
 // ===== Prize Pool Section =====
-function Prize() {
+function PrizeSection() {
   return (
     <div style={{
-      backgroundColor: "#060606",
+      
   width: "100%",
 minHeight: "100vh",
-backgroundColor: "#060606",
+
 display: "flex",
 flexDirection: "column",
 alignItems: "center",
@@ -380,20 +366,19 @@ overflow: "hidden",
 
 const REGISTER_LINK = "https://www.ipu.ac.in/";
 
-function Registration() {
+function RegistrationSection() {
 return (
     <>
       <style>{`
-        .reg-page {
-          position: fixed;
-          top: 0; left: 0; right: 0; bottom: 0;
-          background-color: #000;
-          overflow-y: auto;
-          overflow-x: hidden;
-          width: 100vw;
-          min-height: 100vh;
-          box-sizing: border-box;
-        }
+
+      .reg-page {
+  position: relative;
+  
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
 
         /* Heading */
         .reg-heading {
