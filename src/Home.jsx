@@ -1046,8 +1046,8 @@ export default function Home() {
       <section id="faq" className="relative w-full">
         <div className="w-full h-full  relative">
           <div className=''>
-            <img className='hidden lg:block' src={Faq} alt='faq' />
-            <img className='block lg:hidden h-8' src={Faq2} alt='faq' />
+            <img className='hidden lg:block' src={Faq} alt='faq'/> 
+            <img className='block lg:hidden h-[8vw]' src={Faq2} alt='faq'/> 
           </div>
           <div className='main-content'>
             <ul className="accordion">
@@ -1095,20 +1095,20 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <img className='absolute h-14 top-220 left-1 lg:top-210 lg:left-8 lg:h-27' src={MyLogo} alt='logo' />
-          <img className='absolute h-20 top-215 lg:h-25 lg:top-206 -right-1' src={decor} alt='decor' />
-          <div className="social-links absolute top-220 right-5 lg:top-210 lg:right-15 flex flex-row gap-1 items-center">
-            <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">
-              <img className='w-9 lg:w-12' src={linktree} alt="linktree" />
+          <img className='absolute h-[13vw] top-[205vw] left-[2vw] lg:top-[54.56vw] lg:left-[2.22vw] lg:h-[6.50vw]' src={MyLogo} alt='logo'/>
+          <img className='absolute h-[14vw] top-[205vw] lg:h-[5.10svw] lg:top-[55.38vw] -right-[0.5vw]' src={decor} alt='decor'/>
+          <div className="social-links absolute top-[207.55vw] right-[2vw] lg:top-[56.27svw] lg:right-[1.93vw] lg:w-[14.91vw] lg:h-[3.55vw] flex flex-row justify-evenly gap-1 items-center bg-black rounded-xl">
+            <a href="https://www.actsedc.in/" target="_blank" rel="noopener noreferrer">
+              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={linktree} alt="linktree" />
             </a>
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <img className='w-9 lg:w-12' src={instagram} alt="Instagram" />
+            <a href="https://www.instagram.com/acts_edc/" target="_blank" rel="noopener noreferrer">
+              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={instagram} alt="Instagram" />
             </a>
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <img className='w-9 lg:w-12' src={linkedin} alt="LinkedIn" />
+            <a href="https://www.linkedin.com/company/acts-edc/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={linkedin} alt="LinkedIn" />
             </a>
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <img className='w-9 lg:w-12' src={gmail} alt="gmail" />
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=acts.edc@gmail.com" target="_blank" rel="noopener noreferrer">
+              <img className='w-[8vw] lg:w-[3.3vw] rounded-xl' src={gmail} alt="gmail" />
             </a>
           </div>
         </div>
