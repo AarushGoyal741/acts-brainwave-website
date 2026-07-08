@@ -76,12 +76,15 @@ import Tracks from "./components/Tracks.jsx";
 
 
 const events = [
-  { side: "left", name: "Registrations Open", date: "28 / 06 / 2026" },
-  { side: "right", name: "Team Formation", date: "10 / 07 / 2026" },
-  { side: "left", name: "Problem Statements", date: "20 / 07 / 2026" },
-  { side: "right", name: "Round 1 — Prelims", date: "01 / 08 / 2026"},
-  { side: "left", name: "Round 2 — Semis", date: "10 / 08 / 2026" },
-  { side: "right", name: "Grand Finale", date: "16 / 08 / 2026" },
+  { side: "left", name: "Registrations Open", date: "07 / 07 / 2026" },
+  { side: "right", name: "Release of Track Set 1", date: "20 / 07 / 2026" },
+  { side: "left", name: "Submission Round", date: "25 / 07 / 2026" },
+  { side: "right", name: "Release of Track Set 2", date: "30 / 07 / 2026" },
+  { side: "left", name: "Online Evaluation Round Result Shortlisted (List-1)", date: "10 / 08 / 2026" },
+  { side: "right", name: "Closure of Registration & Submission", date: "12 / 08 / 2026" },
+  { side: "left", name: "Online Evaluation Round Result Shortlisted (List-2)", date: "14 / 08 / 2026" },
+  { side: "right", name: "Virtual Evaluation & Elimination Round", date: "16 / 08 / 2026" },
+  { side: "left", name: "Grand Finale Finalists Result Announcement", date: "18 / 08 / 2026" },
 ];
 
 // ===== Single event row =====
@@ -107,7 +110,7 @@ function EventRow({ event }) {
   }, []);
 
   return (
-    <div ref={rowRef} style={{ position: "relative", display: "flex", alignItems: "center", minHeight: "140px" }}>
+    <div ref={rowRef} className="event-row">
       {/* Dot */}
       <div style={{
         position: "absolute", left: "50%", top: "50%",
@@ -133,7 +136,7 @@ function EventRow({ event }) {
       }} />
 
       {/* Text above line */}
-      <div style={{
+      <div className="event-text" style={{
         position: "absolute", top: "50%", transform: "translateY(-120%)",
         right: isLeft ? "calc(50% + 20px)" : "auto",
         left: isLeft ? "auto" : "calc(50% + 20px)",
@@ -142,12 +145,47 @@ function EventRow({ event }) {
         transition: "opacity 0.5s ease",
         zIndex: 20,
       }}>
-        <p style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(1.2rem, 4.5vw, 4.5rem)", letterSpacing: "3px", color: "#ffffff", }}>
+        <p className="event-title" style={{
+          fontFamily: "'Bebas Neue', sans-serif",
+          letterSpacing: "3px", color: "#ffffff",
+        }}>
           {event.name}
         </p>
-        <p style={{ fontFamily: "'Share Tech Mono', monospace", fontSize:"clamp(0.8rem, 2.2vw, 3rem)", color: "#c8ff00", letterSpacing: "2px", margin: "2px 0 0" }}>
+        <p className="event-date" style={{
+          fontFamily: "'Share Tech Mono', monospace",
+          color: "#c8ff00", letterSpacing: "2px", margin: "2px 0 0",
+        }}>
           {event.date}
         </p>
+      </div>
+    </div>
+  );
+}
+// ===== Grand Finale Highlight =====
+function GrandFinaleBlock() {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className={`finale-wrap ${visible ? "finale-visible" : ""}`}>
+      <div className="finale-box">
+        <span className="finale-tag">★ SEASON FINALE ★</span>
+        <h2 className="finale-title">GRAND FINALE</h2>
+        <p className="finale-date">21 / 08 / 2026</p>
       </div>
     </div>
   );
@@ -159,38 +197,143 @@ function TimelineSection() {
     <div id="timeline" style={{
       position: "relative",
       width: "100%",
-     
       minHeight: "120vh",
-      overflowX: "hidden",
+      overflow: "hidden",
       paddingBottom: "120px",
     }}>
 
       {/* Google Fonts */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap" />
 
+      {/* Responsive-only rules: laptop = min-width 1024px */}
+      <style>{`
+        .event-row {
+          position: relative;
+          display: flex;
+          align-items: center;
+          min-height: 140px;
+        }
+        .event-title {
+          font-size: clamp(1.2rem, 4.5vw, 4.5rem);
+        }
+        .event-date {
+          font-size: clamp(0.8rem, 2.2vw, 3rem);
+        }
+
+        @media (min-width: 1024px) {
+          .event-row {
+            min-height: 220px;   /* more space between green lines on laptop */
+          }
+          .event-title {
+            font-size: 4rem;     /* bigger fixed size on laptop */
+          }
+          .event-date {
+            font-size: 2rem;
+          }
+        }
+        
+        .finale-wrap {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          margin-top: 60px;
+          opacity: 0;
+          transform: scale(0.85);
+          transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .finale-wrap.finale-visible {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        .finale-box {
+          position: relative;
+          padding: 40px 60px;
+          border: 2px solid #c8ff00;
+          border-radius: 12px;
+          text-align: center;
+          background: radial-gradient(circle at center, rgba(200,255,0,0.08), rgba(0,0,0,0.4));
+          overflow: hidden;
+          animation: finale-pulse 2.4s ease-in-out infinite;
+        }
+
+        /* Outer glow pulse */
+        @keyframes finale-pulse {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(200,255,0,0.4), 0 0 40px rgba(200,255,0,0.15);
+          }
+          50% {
+            box-shadow: 0 0 35px rgba(200,255,0,0.7), 0 0 70px rgba(200,255,0,0.3);
+          }
+        }
+
+        /* Sweeping light sheen across the box */
+        .finale-box::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -150%;
+          width: 60%;
+          height: 100%;
+          background: linear-gradient(120deg, transparent, rgba(200,255,0,0.25), transparent);
+          transform: skewX(-20deg);
+          animation: finale-sweep 3.5s ease-in-out infinite;
+        }
+        @keyframes finale-sweep {
+          0%   { left: -150%; }
+          50%  { left: 150%; }
+          100% { left: 150%; }
+        }
+
+        .finale-tag {
+          display: inline-block;
+          font-family: 'Share Tech Mono', monospace;
+          font-size: 0.85rem;
+          letter-spacing: 4px;
+          color: #c8ff00;
+          margin-bottom: 10px;
+        }
+
+        .finale-title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: clamp(2.2rem, 8vw, 5.5rem);
+          letter-spacing: 6px;
+          color: #ffffff;
+          text-shadow: 0 0 12px rgba(200,255,0,0.8), 0 0 30px rgba(200,255,0,0.4);
+          margin: 0;
+        }
+
+        .finale-date {
+          font-family: 'Share Tech Mono', monospace;
+          font-size: clamp(1.1rem, 3vw, 2rem);
+          color: #c8ff00;
+          letter-spacing: 3px;
+          margin-top: 8px;
+          text-shadow: 0 0 8px rgba(200,255,0,0.6);
+        }
+
+        /* Laptop sizing bump, matching your existing breakpoint */
+        @media (min-width: 1024px) {
+          .finale-box {
+            padding: 50px 90px;
+          }
+          .finale-title {
+            font-size: 6rem;
+          }
+          .finale-date {
+            font-size: 2.2rem;
+          }
+        }
+      `}</style>
+
       {/* ── BACKGROUND ELEMENTS ── */}
-
-
-      {/* Smiley — bottom left, half peeking out */}
       <img src={smileyImg} alt="" style={{
-        position: "absolute",
-        bottom: "60px",        /* change to move up or down */
-        left: "-55px",         /* negative = peek from edge */
-        width: "240px",        /* change to resize */
-        pointerEvents: "none",
-        userSelect: "none",
-        zIndex: 1,
+        position: "absolute", bottom: "-50px", left: "-55px",
+        width: "240px", pointerEvents: "none", userSelect: "none", zIndex: 1,
       }} />
-
-      {/* Spray can — bottom center-right */}
       <img src={sprayImg} alt="" style={{
-        position: "absolute",
-        bottom: "10px",        /* change to move up or down */
-        right: "-35px",         /* change to move left or right */
-        width: "130px",        /* change to resize */
-        pointerEvents: "none",
-        userSelect: "none",
-        zIndex: 1,
+        position: "absolute", bottom: "10px", right: "-35px",
+        width: "130px", pointerEvents: "none", userSelect: "none", zIndex: 1,
       }} />
 
       {/* ── HEADING ── */}
@@ -204,32 +347,25 @@ function TimelineSection() {
 
       {/* ── VERTICAL SPINE LINE ── */}
       <div style={{
-        position: "absolute",
-        left: "50%",
-        transform: "translateX(-50%)",
-        top: "180px",
-        bottom: "100px",
-        width: "4px",
-        backgroundColor: "rgba(200,255,0,0.3)",
-        zIndex: 2,
+        position: "absolute", left: "50%", transform: "translateX(-50%)",
+        top: "180px", bottom: "22%", width: "4px",
+        backgroundColor: "rgba(200,255,0,0.3)", zIndex: 2,
       }} />
 
       {/* ── EVENT ROWS ── */}
-      <div style={{
-        position: "relative",
-        maxWidth: "1200px",
-        margin: "0 auto",
-        padding: "0 20px",
-        zIndex: 3,             /* above background images */
-      }}>
+      
+      <div style={{ position: "relative", maxWidth: "1200px", margin: "0 auto", padding: "0 20px", zIndex: 3 }}>
         {events.map((event, index) => (
           <EventRow key={index} event={event} />
         ))}
       </div>
+      
+      {/* ── GRAND FINALE HIGHLIGHT ── */}
+      <GrandFinaleBlock />
 
     </div>
   );
-}
+} 
 
 // ===== Prize Pool Section =====
 function PrizeSection() {
