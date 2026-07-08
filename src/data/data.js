@@ -6,6 +6,7 @@ import MariiaSilichPFP from "../assets/sponsorsandmentors/MariiaSilich.jpg"
 import VladislavKuznetsovPFP from "../assets/sponsorsandmentors/VladislavKuznetsov.jpg"
 import ReshmikaDhandapaniPFP from "../assets/sponsorsandmentors/ReshmikaDhandapani.jpg"
 import VishalChandwaniPFP from "../assets/sponsorsandmentors/VishalChandwani.png"
+import NileshDhagePFP from "../assets/sponsorsandmentors/NileshDhage.jpg"
 
 
 export const sponsors = [
@@ -77,6 +78,14 @@ export const sponsors = [
     description: "Senior Software Engr. | Microsoft",
     image: VishalChandwaniPFP,
     linkedin: "https://www.linkedin.com/in/vishalchandwani/",
+  },
+  {
+    id: 8,
+    name: "Nilesh Dhage",
+    role: "Mentor",
+    description: "Director of Product Management | Fidelity Investments",
+    image: NileshDhagePFP,
+    linkedin: "https://www.linkedin.com/in/nileshdhage/",
   },
   
 ];

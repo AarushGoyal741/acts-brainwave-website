@@ -5,7 +5,7 @@ export default function PersonCard({ person }) {
     <div
       className="
         w-[180px]
-        h-[290px]
+        h-[300px]
 
         sm:w-[180px]
         sm:h-[285px]
@@ -123,6 +123,7 @@ export default function PersonCard({ person }) {
             font-bold
             text-m
             md:text-lg
+            mb-2
 
             leading-tight
           "
