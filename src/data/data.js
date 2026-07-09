@@ -102,7 +102,7 @@ export const sponsors = [
     id: 9,
     name: "Mandar Chaudhari",
     role: "Mentor",
-    description: "\u2003\u2003\u2003\u2003\u2003\u2003\u2003\u2003\u2003Software Developer | Land IQ",
+    description: "Software Developer | Land IQ",
     image: MandarChaudhariPFP,
     linkedin: "https://www.linkedin.com/in/mandar-chaudhari-7a219a200/",
     flag: usFlag,
