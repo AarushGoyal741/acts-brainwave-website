@@ -7,6 +7,7 @@ import VladislavKuznetsovPFP from "../assets/sponsorsandmentors/VladislavKuznets
 import ReshmikaDhandapaniPFP from "../assets/sponsorsandmentors/ReshmikaDhandapani.jpg"
 import VishalChandwaniPFP from "../assets/sponsorsandmentors/VishalChandwani.png"
 import NileshDhagePFP from "../assets/sponsorsandmentors/NileshDhage.jpg"
+import MadarChaudhariPFP from "../assets/sponsorsandmentors/MandarChaudhari.jpg"
 import usFlag from "../assets/sponsorsandmentors/Flag_of_the_United_States.png"
 
 
@@ -94,6 +95,16 @@ export const sponsors = [
     description: "Director of Product Management | Fidelity Investments",
     image: NileshDhagePFP,
     linkedin: "https://www.linkedin.com/in/nileshdhage/",
+    flag: usFlag,
+  },
+  
+  {
+    id: 9,
+    name: "Mandar Chaudhari",
+    role: "Mentor",
+    description: "\u2003\u2003\u2003\u2003\u2003\u2003\u2003\u2003\u2003Software Developer | Land IQ",
+    image: MadarChaudhariPFP,
+    linkedin: "https://www.linkedin.com/in/mandar-chaudhari-7a219a200/",
     flag: usFlag,
   },
   
