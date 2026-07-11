@@ -8,6 +8,9 @@ import ReshmikaDhandapaniPFP from "../assets/sponsorsandmentors/ReshmikaDhandapa
 import VishalChandwaniPFP from "../assets/sponsorsandmentors/VishalChandwani.png"
 import NileshDhagePFP from "../assets/sponsorsandmentors/NileshDhage.jpg"
 import MandarChaudhariPFP from "../assets/sponsorsandmentors/MandarChaudhari.jpg"
+import Saj from "../assets/sponsorsandmentors/saj.jpg"
+import Saumya from "../assets/sponsorsandmentors/saumya.jpg"
+
 import usFlag from "../assets/sponsorsandmentors/Flag_of_the_United_States.png"
 
 
@@ -79,15 +82,15 @@ export const sponsors = [
     linkedin: "https://www.linkedin.com/in/reshmika-dhandapani/",
     flag: usFlag,
   },
-  {
-    id: 7,
-    name: "Vishal Chandwani",
-    role: "Mentor",
-    description: "Senior Software Engr. | Microsoft",
-    image: VishalChandwaniPFP,
-    linkedin: "https://www.linkedin.com/in/vishalchandwani/",
-    flag: usFlag,
-  },
+  // {
+  //   id: 7,
+  //   name: "Vishal Chandwani",
+  //   role: "Mentor",
+  //   description: "Senior Software Engr. | Microsoft",
+  //   image: VishalChandwaniPFP,
+  //   linkedin: "https://www.linkedin.com/in/vishalchandwani/",
+  //   flag: usFlag,
+  // },
   {
     id: 8,
     name: "Nilesh Dhage",
@@ -107,5 +110,27 @@ export const sponsors = [
     linkedin: "https://www.linkedin.com/in/mandar-chaudhari-7a219a200/",
     flag: usFlag,
   },
+
+  {
+    id: 10,
+    name: "Saumya Jariwala",
+    role: "Mentor",
+    description: "Member of Technical Staff | OpenAI",
+    image: Saumya,
+    linkedin: "https://www.linkedin.com/in/mandar-chaudhari-7a219a200/",
+    flag: usFlag,
+  },
+
+  {
+    id: 11,
+    name: "Saj Maru",
+    role: "Mentor",
+    description: "Data Scientist III | Walmart",
+    image: Saj,
+    linkedin: "https://www.linkedin.com/in/sajmaru/",
+    flag: usFlag,
+  },
+
+  
   
 ];
