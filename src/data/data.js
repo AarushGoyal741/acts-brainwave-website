@@ -1,4 +1,6 @@
 import googleLogo from "../assets/sponsorsandmentors/googleLogo.webp";
+
+
 import JingDongPFP from "../assets/sponsorsandmentors/JingDong.png"
 import ArpitSabherwalPFP from "../assets/sponsorsandmentors/ArpitSabherwal.png"
 import BrajeshKumarShrivastavaPFP from "../assets/sponsorsandmentors/BrajeshKumarShrivastava.jpg"
@@ -11,7 +13,17 @@ import MandarChaudhariPFP from "../assets/sponsorsandmentors/MandarChaudhari.jpg
 import Saj from "../assets/sponsorsandmentors/saj.jpg"
 import Saumya from "../assets/sponsorsandmentors/saumya.jpg"
 
+import yash from "../assets/sponsorsandmentors/yash.jpg"
+import mohit from "../assets/sponsorsandmentors/mohit.png"
+import tanisha from "../assets/sponsorsandmentors/tanisha.png"
+import muskan from "../assets/sponsorsandmentors/muskan.jpg"
+import aqsa from "../assets/sponsorsandmentors/aqsa.jpg"
+import kamal from "../assets/sponsorsandmentors/kamal.jpg"
+import ekta from "../assets/sponsorsandmentors/ekta.jpg"
+import ritesh from "../assets/sponsorsandmentors/ritesh.jpg"
+
 import usFlag from "../assets/sponsorsandmentors/Flag_of_the_United_States.png"
+import indflag from "../assets/sponsorsandmentors/ind_flag.png"
 
 
 export const sponsors = [
@@ -131,6 +143,83 @@ export const sponsors = [
     flag: usFlag,
   },
 
-  
-  
+  {
+    id: 12,
+    name: "Yash Chatrath",
+    role: "Mentor",
+    description: "Associate DA Analyst | Sony",
+    image: yash,
+    linkedin: "https://www.linkedin.com/in/chatrath-yash",
+    flag: indflag,
+  },
+
+  {
+    id: 13,
+    name: "Mohit Arora",
+    role: "Mentor",
+    description: "SDE | InsuranceDekho",
+    image: mohit,
+    linkedin: "https://www.linkedin.com/in/mohit8181",
+    flag: indflag,
+  },
+
+  {
+    id: 14,
+    name: "Tanisha Bansal",
+    role: "Mentor",
+    description: "AI Engineer | SITA",
+    image: tanisha,
+    linkedin: "https://www.linkedin.com/in/tanishabansal110902/",
+    flag: indflag,
+  },
+
+  {
+    id: 15,
+    name: "Muskan singh",
+    role: "Mentor",
+    description: "React developer | G2i inc.",
+    image: muskan,
+    linkedin: "https://www.linkedin.com/in/muskan-singh-94baab226/",
+    flag: indflag,
+  },
+
+  {
+    id: 16,
+    name: "Aqsa Parveen",
+    role: "Mentor",
+    description: "VITALTH FORGERS PRIVATE LIMITED",
+    image: aqsa,
+    linkedin: "https://www.linkedin.com/in/aqsa-parveen-0366322a1/",
+    flag: indflag,
+  },
+
+  {
+    id: 17,
+    name: "Kamal Kashyap",
+    role: "Mentor",
+    description: "Software Programmer | Hygge Energy",
+    image: kamal,
+    linkedin: "https://www.linkedin.com/in/kamal-kashyap-393a6b1b7/",
+    flag: indflag,
+  },
+
+  {
+    id: 18,
+    name: "Ekta Arora",
+    role: "Mentor",
+    description: "Enterprise software developer | Volvo Eicher Commercial Vehicles Ltd.",
+    image: ekta,
+    linkedin: "https://www.linkedin.com/in/ektaarora01/",
+    flag: indflag,
+  },
+
+  {
+    id: 19,
+    name: "Ritesh Kumar Pandey",
+    role: "Mentor",
+    description: "Data Scientist | Blinkit",
+    image: ritesh,
+    linkedin: "https://www.linkedin.com/in/riteshkpandey28",
+    flag: indflag,
+  },
 ];
