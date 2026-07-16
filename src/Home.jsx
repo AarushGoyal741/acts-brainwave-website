@@ -1107,7 +1107,7 @@ export default function Home() {
       {/* =============================================================== */}
       {/*                         SPONSORS                              */}
       {/* =============================================================== */}
-      <section id="sponsors" className="relative w-full py-10 md:py-24 overflow-hidden ">
+      <section id="sponsors" className="relative w-full py-10 md:py-24 overflow-hidden">
 
         <div className="w-full px-4 md:px-8 lg:px-12">
 
@@ -1159,8 +1159,6 @@ export default function Home() {
             />
 
           </div>
-
-          {/* ================= Premium Sponsors ================= */}
 
           {/* ================= Premium Sponsors ================= */}
 
@@ -1229,6 +1227,63 @@ export default function Home() {
 
             </div>
 
+            {/* ============== In-Kind Heading ============== */}
+
+            <div className="flex justify-center mb-10 mt-10">
+
+              <img
+                src={inKindHeading}
+                alt="In-Kind Sponsors"
+                className="
+                w-[260px]
+                md:w-[420px]
+                lg:w-[520px]
+                h-auto
+              "
+              />
+
+            </div>
+
+            {/* Carousel */}
+
+            <div
+              className="
+              overflow-hidden
+              rounded-3xl
+              md:py-8
+
+              relative
+              isolate
+            "
+            >
+              <div className="sponsors-track mt-5">
+
+                {[...inKindSponsors, ...inKindSponsors].map((sponsor, index) => (
+
+                  <div
+                    key={`${sponsor.id}-${index}`}
+                    className="
+                    flex
+                    items-center
+                    justify-center
+
+                    shrink-0
+
+                    px-4
+                    md:px-6
+                    lg:px-8
+                  "
+                  >
+
+                    <SponsorLogo sponsor={sponsor} />
+
+                  </div>
+
+                ))}
+
+              </div>
+            </div>
+
             {/* Community */}
 
             <div className="flex flex-col items-center gap-6 w-full mt-10">
@@ -1271,63 +1326,6 @@ export default function Home() {
 
             </div>
 
-          </div>
-
-          {/* ============== In-Kind Heading ============== */}
-
-          <div className="flex justify-center mb-10 mt-10">
-
-            <img
-              src={inKindHeading}
-              alt="In-Kind Sponsors"
-              className="
-                w-[260px]
-                md:w-[420px]
-                lg:w-[520px]
-                h-auto
-              "
-            />
-
-          </div>
-
-          {/* Carousel */}
-
-          <div
-            className="
-              overflow-hidden
-              rounded-3xl
-              md:py-8
-
-              relative
-              isolate
-            "
-          >
-            <div className="sponsors-track mt-5">
-
-              {[...inKindSponsors, ...inKindSponsors].map((sponsor, index) => (
-
-                <div
-                  key={`${sponsor.id}-${index}`}
-                  className="
-                    flex
-                    items-center
-                    justify-center
-
-                    shrink-0
-
-                    px-4
-                    md:px-6
-                    lg:px-8
-                  "
-                >
-
-                  <SponsorLogo sponsor={sponsor} />
-
-                </div>
-
-              ))}
-
-            </div>
           </div>
 
         </div>
