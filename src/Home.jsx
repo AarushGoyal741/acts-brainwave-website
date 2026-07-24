@@ -74,6 +74,7 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import Tracks from "./components/Tracks.jsx";
 
 import SponsorLogo from "./components/SponsorLogo.jsx";
+import MLHTrustBadge from "./components/MLHTrustBadge.jsx";
 import goldSponsorHeading from "./assets/goldSponsorHeading.png"
 import silverSponsorHeading from "./assets/silverSponsorHeading.png"
 import bronzeSponsorHeading from "./assets/bronzeSponsorHeading.png"
@@ -783,6 +784,7 @@ export default function Home() {
       {/* =============================================================== */}
 
       <Navbar />
+      <MLHTrustBadge />
 
       {/* =============================================================== */}
       {/*                        HERO SECTION                            */}
