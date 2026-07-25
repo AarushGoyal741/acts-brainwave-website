@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./Home";
 import DitherBackground from "./components/DitherBackground";
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <DitherBackground color="#BDBDBD" density={0.25}/>
       <Home />
+      <Analytics />
     </>);
 }
 
