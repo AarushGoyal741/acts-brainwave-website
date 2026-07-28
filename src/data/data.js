@@ -1,4 +1,5 @@
 import googleLogo from "../assets/sponsorsandmentors/googleLogo.webp";
+import idevion from "../assets/sponsorsandmentors/idevion.jpeg"
 
 
 import JingDongPFP from "../assets/sponsorsandmentors/JingDong.png"
@@ -39,6 +40,12 @@ export const goldSponsors = [
     logo: googleLogo,
     link: "https://github.com",
   },
+  {
+    id: 2,
+    name: "MLH",
+    logo: googleLogo,
+    link: "#",
+  },
 ];
 
 // =========================
@@ -51,6 +58,12 @@ export const silverSponsors = [
   {
     id: 1,
     name: "Algorand",
+    logo: googleLogo,
+    link: "https://github.com",
+  },
+  {
+    id: 2,
+    name: "Neo4j",
     logo: googleLogo,
     link: "https://github.com",
   },
@@ -80,19 +93,19 @@ export const bronzeSponsors = [
 export const communityPartners = [
   {
     id: 1,
-    name: "devsphere",
+    name: "fluxio",
     logo: googleLogo,
-    link: "#",
+    link: "https://www.fluxor.io/en",
   },
   {
     id: 2,
-    name: "l.o.g.i.c",
-    logo: googleLogo,
+    name: "idevion",
+    logo: idevion,
     link: "#",
   },
   {
     id: 3,
-    name: "gtbit one",
+    name: "sparktech ai",
     logo: googleLogo,
     link: "#",
   },
@@ -111,6 +124,18 @@ export const mediaPartners = [
     logo: googleLogo,
     link: "#",
   },
+  {
+    id: 2,
+    name: "eatmynews",
+    logo: googleLogo,
+    link: "#",
+  },
+  {
+    id: 3,
+    name: "shekunj",
+    logo: googleLogo,
+    link: "#",
+  },
 ];
 
 // =========================
@@ -122,9 +147,9 @@ export const mediaPartners = [
 export const inKindSponsors = [
   {
     id: 1,
-    name: ".xyz",
-    logo: googleLogo,
-    link: "#",
+    name: "tin computers",
+    logo: "https://tin.computer/brand/tin-computer/wordmark-ink-on-transparent.svg",
+    link: "https://tin.computer/",
   },
   {
     id: 2,
@@ -134,39 +159,27 @@ export const inKindSponsors = [
   },
   {
     id: 3,
-    name: "google",
-    logo: googleLogo,
-    link: "#",
-  },
-  {
-    id: 3,
-    name: "gemini",
+    name: "google gemini",
     logo: googleLogo,
     link: "#",
   },
   {
     id: 4,
-    name: "code grafter",
+    name: "featherless ai",
     logo: googleLogo,
     link: "#",
   },
   {
     id: 5,
-    name: "mlh",
-    logo: googleLogo,
-    link: "#",
+    name: "codecrafter",
+    logo: "https://buildyourownx.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.df7bb93f.png&w=96&q=75",
+    link: "https://buildyourownx.com/build-your-own-x-github",
   },
   {
     id: 6,
-    name: "neo4j",
-    logo: googleLogo,
-    link: "#",
-  },
-  {
-    id: 7,
     name: "unstop",
     logo: googleLogo,
-    link: "#",
+    link: "https://unstop.com/",
   },
 ];
 
