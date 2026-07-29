@@ -1109,7 +1109,7 @@ export default function Home() {
       {/* =============================================================== */}
       {/*                         SPONSORS                              */}
       {/* =============================================================== */}
-      <section id="sponsors" className="relative w-full py-10 md:py-24 overflow-hidden hidden">
+      <section id="sponsors" className="relative w-full py-10 md:py-24 overflow-hidden">
 
         <div className="w-full px-4 md:px-8 lg:px-12">
 
@@ -1165,11 +1165,8 @@ export default function Home() {
           {/* ================= Premium Sponsors ================= */}
 
           <div className="w-full flex flex-col items-center gap-14 mb-20">
-
             {/* Gold */}
-
             <div className="flex flex-col items-center gap-6">
-
               <img
                 src={goldSponsorHeading}
                 alt="Gold Sponsor"
@@ -1178,19 +1175,13 @@ export default function Home() {
 
               <div className="flex justify-center gap-10 flex-wrap">
                 {goldSponsors.map((sponsor) => (
-                  <SponsorLogo
-                    key={sponsor.id}
-                    sponsor={sponsor}
-                  />
+                  <SponsorLogo key={sponsor.id} sponsor={sponsor} />
                 ))}
               </div>
-
             </div>
 
             {/* Silver */}
-
             <div className="flex flex-col items-center gap-6">
-
               <img
                 src={silverSponsorHeading}
                 alt="Silver Sponsor"
@@ -1199,97 +1190,43 @@ export default function Home() {
 
               <div className="flex justify-center gap-10 flex-wrap">
                 {silverSponsors.map((sponsor) => (
-                  <SponsorLogo
-                    key={sponsor.id}
-                    sponsor={sponsor}
-                  />
+                  <SponsorLogo key={sponsor.id} sponsor={sponsor} />
                 ))}
               </div>
-
             </div>
 
             {/* Bronze */}
+            {/* <div className="flex flex-col items-center gap-6 w-full">
+    <img
+      src={bronzeSponsorHeading}
+      alt="Bronze Sponsors"
+      className="w-[260px] md:w-[520px] h-auto"
+    />
 
+    <div className="flex flex-wrap justify-center gap-10">
+      {bronzeSponsors.map((sponsor) => (
+        <SponsorLogo key={sponsor.id} sponsor={sponsor} />
+      ))}
+    </div>
+  </div> */}
+
+            {/* ============== In-Kind Heading & Stationary Grid ============== */}
             <div className="flex flex-col items-center gap-6 w-full">
-
-              <img
-                src={bronzeSponsorHeading}
-                alt="Bronze Sponsors"
-                className="w-[260px] md:w-[520px] h-auto"
-              />
-
-              <div className="flex flex-wrap justify-center gap-10">
-                {bronzeSponsors.map((sponsor) => (
-                  <SponsorLogo
-                    key={sponsor.id}
-                    sponsor={sponsor}
-                  />
-                ))}
-              </div>
-
-            </div>
-
-            {/* ============== In-Kind Heading ============== */}
-
-            <div className="flex justify-center mb-10 mt-10">
-
               <img
                 src={inKindHeading}
                 alt="In-Kind Sponsors"
-                className="
-                w-[260px]
-                md:w-[420px]
-                lg:w-[520px]
-                h-auto
-              "
+                className="w-[260px] md:w-[420px] lg:w-[520px] h-auto"
               />
 
-            </div>
-
-            {/* Carousel */}
-
-            <div
-              className="
-              overflow-hidden
-              rounded-3xl
-
-              relative
-              isolate
-            "
-            >
-              <div className="sponsors-track ">
-
-                {[...inKindSponsors, ...inKindSponsors, ...inKindSponsors].map((sponsor, index) => (
-
-                  <div
-                    key={`${sponsor.id}-${index}`}
-                     className="
-                      flex
-                      items-center
-                      justify-center
-
-                      shrink-0
-
-                      w-[150px]
-                      sm:w-[180px]
-                      md:w-[220px]
-                      lg:w-[260px]
-                    "
-                  >
-
-                    <SponsorLogo sponsor={sponsor} />
-
-                  </div>
-
+              <div className="flex flex-wrap justify-center gap-10">
+                {inKindSponsors.map((sponsor) => (
+                  <SponsorLogo key={sponsor.id} sponsor={sponsor} />
                 ))}
-
               </div>
             </div>
 
             {/* Community */}
-
             <div className="flex flex-col items-center gap-6 w-full mt-10">
-
               <img
                 src={communityPartnerHeading}
                 alt="Community Partners"
@@ -1298,19 +1235,13 @@ export default function Home() {
 
               <div className="flex flex-wrap justify-center gap-10">
                 {communityPartners.map((sponsor) => (
-                  <SponsorLogo
-                    key={sponsor.id}
-                    sponsor={sponsor}
-                  />
+                  <SponsorLogo key={sponsor.id} sponsor={sponsor} />
                 ))}
               </div>
-
             </div>
 
             {/* Media */}
-
             <div className="flex flex-col items-center gap-6 w-full mt-10">
-
               <img
                 src={mediaPartnerHeading}
                 alt="Media Partners"
@@ -1319,15 +1250,10 @@ export default function Home() {
 
               <div className="flex flex-wrap justify-center gap-10">
                 {mediaPartners.map((sponsor) => (
-                  <SponsorLogo
-                    key={sponsor.id}
-                    sponsor={sponsor}
-                  />
+                  <SponsorLogo key={sponsor.id} sponsor={sponsor} />
                 ))}
               </div>
-
             </div>
-
           </div>
 
         </div>

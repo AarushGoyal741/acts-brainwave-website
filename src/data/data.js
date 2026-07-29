@@ -1,5 +1,22 @@
 import googleLogo from "../assets/sponsorsandmentors/googleLogo.webp";
 import idevion from "../assets/sponsorsandmentors/idevion.jpeg"
+import github from "../assets/sponsorsandmentors/github.png"
+import MLH from "../assets/sponsorsandmentors/mlh.png"
+import Algorand from "../assets/sponsorsandmentors/algorand.png"
+import Neo4j from "../assets/sponsorsandmentors/Neo4j.png"
+import fluxor from "../assets/sponsorsandmentors/Fluxor.jpg"
+import sparktech from "../assets/sponsorsandmentors/sparktech.png"
+import eventopia from "../assets/sponsorsandmentors/eventopia.png"
+import EMN from "../assets/sponsorsandmentors/EMN.png"
+import shekunj from "../assets/sponsorsandmentors/shekunj.png"
+import fueler from "../assets/sponsorsandmentors/fueler.png"
+import gemini from "../assets/sponsorsandmentors/gemini.png"
+import featherless from "../assets/sponsorsandmentors/featherless.jpg"
+import unstop from "../assets/sponsorsandmentors/unstop.png"
+import tin from "../assets/sponsorsandmentors/tin.png"
+import daworld from "../assets/sponsorsandmentors/daworld.png"
+
+
 
 
 import JingDongPFP from "../assets/sponsorsandmentors/JingDong.png"
@@ -37,14 +54,14 @@ export const goldSponsors = [
   {
     id: 1,
     name: "GitHub",
-    logo: googleLogo,
+    logo: github,
     link: "https://github.com",
   },
   {
     id: 2,
     name: "MLH",
-    logo: googleLogo,
-    link: "#",
+    logo: MLH,
+    link: "https://www.mlh.com/",
   },
 ];
 
@@ -58,14 +75,14 @@ export const silverSponsors = [
   {
     id: 1,
     name: "Algorand",
-    logo: googleLogo,
-    link: "https://github.com",
+    logo: Algorand,
+    link: "https://algorand.co/",
   },
   {
     id: 2,
-    name: "Neo4j",
-    logo: googleLogo,
-    link: "https://github.com",
+    name: "daworld",
+    logo: daworld,
+    link: "https://www.daworld.net/",
   },
 ];
 
@@ -94,20 +111,20 @@ export const communityPartners = [
   {
     id: 1,
     name: "fluxio",
-    logo: googleLogo,
+    logo: fluxor,
     link: "https://www.fluxor.io/en",
   },
   {
     id: 2,
     name: "idevion",
     logo: idevion,
-    link: "#",
+    link: "https://www.linkedin.com/company/idevion/",
   },
   {
     id: 3,
     name: "sparktech ai",
-    logo: googleLogo,
-    link: "#",
+    logo: sparktech,
+    link: "https://www.linkedin.com/company/spark-tech-ai-hub/",
   },
 ];
 
@@ -121,20 +138,20 @@ export const mediaPartners = [
   {
     id: 1,
     name: "eventopia",
-    logo: googleLogo,
-    link: "#",
+    logo: eventopia,
+    link: "https://eventopia.in/",
   },
   {
     id: 2,
     name: "eatmynews",
-    logo: googleLogo,
-    link: "#",
+    logo: EMN,
+    link: "https://www.eatmy.news/",
   },
   {
     id: 3,
     name: "shekunj",
-    logo: googleLogo,
-    link: "#",
+    logo: shekunj,
+    link: "https://www.shekunj.com/",
   },
 ];
 
@@ -148,26 +165,26 @@ export const inKindSponsors = [
   {
     id: 1,
     name: "tin computers",
-    logo: "https://tin.computer/brand/tin-computer/wordmark-ink-on-transparent.svg",
+    logo: tin,
     link: "https://tin.computer/",
   },
   {
     id: 2,
     name: "fueler",
-    logo: googleLogo,
-    link: "#",
+    logo: fueler,
+    link: "https://fueler.io/",
   },
   {
     id: 3,
     name: "google gemini",
-    logo: googleLogo,
-    link: "#",
+    logo: gemini,
+    link: "https://gemini.google.com/app",
   },
   {
     id: 4,
     name: "featherless ai",
-    logo: googleLogo,
-    link: "#",
+    logo: featherless,
+    link: "https://featherless.ai/",
   },
   {
     id: 5,
@@ -178,7 +195,7 @@ export const inKindSponsors = [
   {
     id: 6,
     name: "unstop",
-    logo: googleLogo,
+    logo: unstop,
     link: "https://unstop.com/",
   },
 ];
