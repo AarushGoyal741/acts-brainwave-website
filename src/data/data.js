@@ -39,6 +39,7 @@ import aqsa from "../assets/sponsorsandmentors/aqsa.jpg"
 import kamal from "../assets/sponsorsandmentors/kamal.jpg"
 import ekta from "../assets/sponsorsandmentors/ekta.jpg"
 import ritesh from "../assets/sponsorsandmentors/ritesh.jpg"
+import mudassir from "../assets/sponsorsandmentors/mudassir.jpg"
 
 import usFlag from "../assets/sponsorsandmentors/Flag_of_the_United_States.png"
 import indflag from "../assets/sponsorsandmentors/ind_flag.png"
@@ -372,5 +373,14 @@ export const people = [
     image: Saj,
     linkedin: "https://www.linkedin.com/in/sajmaru/",
     flag: usFlag,
+  },
+  {
+    id: 20,
+    name: "Mohamamd Mudassir",
+    role: "Mentor",
+    description: "Support Engineer | Algorand",
+    image: mudassir,
+    linkedin: "https://www.linkedin.com/in/mohammad-mudassir-b788a41ab/",
+    flag: indflag,
   },
 ];
