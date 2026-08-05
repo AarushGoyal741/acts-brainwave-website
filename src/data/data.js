@@ -73,12 +73,12 @@ export const goldSponsors = [
 //import githubLogo from "../assets/sponsors/github-logo.png";
 
 export const silverSponsors = [
-  {
-    id: 1,
-    name: "Algorand",
-    logo: Algorand,
-    link: "https://algorand.co/",
-  },
+  // {
+  //   id: 1,
+  //   name: "Algorand",
+  //   logo: Algorand,
+  //   link: "https://algorand.co/",
+  // },
   {
     id: 2,
     name: "daworld",
