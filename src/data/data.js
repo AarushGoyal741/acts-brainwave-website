@@ -15,6 +15,7 @@ import featherless from "../assets/sponsorsandmentors/featherless.jpg"
 import unstop from "../assets/sponsorsandmentors/unstop.png"
 import tin from "../assets/sponsorsandmentors/tin.png"
 import daworld from "../assets/sponsorsandmentors/daworld.png"
+import liu from "../assets/sponsorsandmentors/Tianhao Liu.jpg"
 
 
 
@@ -382,5 +383,14 @@ export const people = [
     image: mudassir,
     linkedin: "https://www.linkedin.com/in/mohammad-mudassir-b788a41ab/",
     flag: indflag,
+  },
+  {
+    id: 21,
+    name: "Tianhao Liu",
+    role: "Mentor",
+    description: "Member of Technical Staff | OpenAI",
+    image: liu,
+    linkedin: "https://www.linkedin.com/in/tianhao-arthur-liu/",
+    flag: usFlag,
   },
 ];
