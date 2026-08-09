@@ -10,6 +10,8 @@ import box1 from "./assets/box1.png";
 import box2 from "./assets/box2.png";
 import box3 from "./assets/box3.png";
 import box4 from "./assets/box4.png";
+import box5 from "./assets/box5.png";
+import box6 from "./assets/box6.png";
 
 import prizeCards from "./assets/prize-cards.png";
 import registrationHeading from "./assets/registration-heading.png";
@@ -447,9 +449,21 @@ function PrizeSection() {
 
           <img
             src={box3}
-            alt="2nd Runner Up"
-            className="w-full max-w-[345px] h-auto ml-[4vw]"
+            alt="blockchain winner"
+            className="w-full max-w-[325px] h-auto ml-[4vw]"
           />
+
+          <img
+              src={box5}
+              alt="blockchain 1st Runner Up"
+              className="w-full max-w-[325px] h-auto ml-[3vw]"
+            />
+
+            <img
+              src={box6}
+              alt="blockchain 2nd Runner Up"
+              className="w-full max-w-[325px] h-auto ml-[4vw]"
+            />
 
         </div>
 
@@ -469,7 +483,7 @@ function PrizeSection() {
           />
 
           {/* Bottom Three */}
-          <div className="mt-10 ml-10 flex justify-center items-end gap-6 lg:gap-8 xl:gap-10">
+          <div className="mt-7 ml-10 flex flex-row justify-center items-end gap-6 lg:gap-8 xl:gap-10">
 
             <img
               src={box1}
@@ -495,10 +509,36 @@ function PrizeSection() {
 
             <img
               src={box3}
-              alt="2nd Runner Up"
+              alt="blockchain winner"
               className="
             w-[220px]
-            lg:w-[270px]
+            lg:w-[290px]
+            xl:w-[340px]
+            h-auto
+          "
+            />
+          </div>
+
+          {/* Bottom Two */}
+          <div className="mt-7 ml-10 flex flex-row justify-center items-end gap-6 lg:gap-8 xl:gap-10">
+
+            <img
+              src={box5}
+              alt="blockchain 1st Runner Up"
+              className="
+            w-[250px]
+            lg:w-[290px]
+            xl:w-[340px]
+            h-auto
+          "
+            />
+
+            <img
+              src={box6}
+              alt="blockchain 2nd Runner Up"
+              className="
+            w-[250px]
+            lg:w-[280px]
             xl:w-[340px]
             h-auto
           "
@@ -506,9 +546,8 @@ function PrizeSection() {
 
           </div>
 
-        </div>
-
       </div>
+     </div> 
 
     </section>
   );
