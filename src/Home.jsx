@@ -12,6 +12,7 @@ import box3 from "./assets/box3.png";
 import box4 from "./assets/box4.png";
 import box5 from "./assets/box5.png";
 import box6 from "./assets/box6.png";
+import winner from "./assets/winner.png"
 
 import prizeCards from "./assets/prize-cards.png";
 import registrationHeading from "./assets/registration-heading.png";
@@ -448,7 +449,7 @@ function PrizeSection() {
           />
 
           <img
-            src={box3}
+            src={winner}
             alt="blockchain winner"
             className="w-full max-w-[325px] h-auto ml-[4vw]"
           />
@@ -508,13 +509,13 @@ function PrizeSection() {
             />
 
             <img
-              src={box3}
+              src={winner}
               alt="blockchain winner"
               className="
-            w-[220px]
+            w-[210px]
             lg:w-[290px]
-            xl:w-[340px]
-            h-auto
+            xl:w-[320px]
+            pb-[17px]
           "
             />
           </div>
