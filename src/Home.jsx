@@ -16,6 +16,7 @@ import winner from "./assets/winner.png"
 
 import prizeCards from "./assets/prize-cards.png";
 import registrationHeading from "./assets/registration-heading.png";
+import educationPartnerHeading from "./assets/sponsorsandmentors/edu.png"
 import posterFrame from "./assets/poster-frame.png";
 import registerBtn from "./assets/register-btn.png";
 import iconPrize from "./assets/icon-prize.png";
@@ -91,6 +92,7 @@ import {
   communityPartners,
   mediaPartners,
   inKindSponsors,
+  eduSponsors,
 } from "./data/data.js";
 
 
@@ -1277,8 +1279,11 @@ export default function Home() {
                 {communityPartners.map((sponsor) => (
                   <SponsorLogo key={sponsor.id} sponsor={sponsor} />
                 ))}
-              </div>
+              </div> 
             </div>
+
+
+            
 
             {/* Media */}
             <div className="flex flex-col items-center gap-6 w-full mt-10">
@@ -1290,6 +1295,20 @@ export default function Home() {
 
               <div className="flex flex-wrap justify-center gap-10">
                 {mediaPartners.map((sponsor) => (
+                  <SponsorLogo key={sponsor.id} sponsor={sponsor} />
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center gap-6 w-full mt-0">
+              <img
+                src={educationPartnerHeading}
+                alt="Community Partners"
+                className="w-[320px] md:w-[620px] h-auto "
+              />
+
+              <div className="flex flex-wrap justify-center gap-10">
+                {eduSponsors.map((sponsor) => (
                   <SponsorLogo key={sponsor.id} sponsor={sponsor} />
                 ))}
               </div>

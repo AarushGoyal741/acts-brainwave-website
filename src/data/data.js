@@ -15,6 +15,8 @@ import featherless from "../assets/sponsorsandmentors/featherless.jpg"
 import unstop from "../assets/sponsorsandmentors/unstop.png"
 import tin from "../assets/sponsorsandmentors/tin.png"
 import daworld from "../assets/sponsorsandmentors/daworld.png"
+import ninja from "../assets/sponsorsandmentors/ninja.png"
+
 import liu from "../assets/sponsorsandmentors/Tianhao Liu.jpg"
 
 
@@ -99,6 +101,15 @@ export const bronzeSponsors = [
     id: 1,
     name: "MLH",
     logo: googleLogo,
+    link: "#",
+  },
+];
+
+export const eduSponsors = [
+  {
+    id: 1,
+    name: "MLH",
+    logo: ninja,
     link: "#",
   },
 ];
