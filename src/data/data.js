@@ -110,7 +110,7 @@ export const eduSponsors = [
     id: 1,
     name: "MLH",
     logo: ninja,
-    link: "#",
+    link: "https://campusninjas.com/",
   },
 ];
 
