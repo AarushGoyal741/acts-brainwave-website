@@ -1148,9 +1148,150 @@ export default function Home() {
       {/* REGISTRATION SECTION */}
       <RegistrationSection />
 
+      
+      
+
+      {/* =============================================================== */}
+      {/*                    MENTORS / JUDGES                           */}
+      {/* =============================================================== */}
+      <section id="mentors" className="relative w-full">
+
+        {/* =============== MENTORS START =============== */}
+
+        <div className="w-full px-4 md:px-8 lg:px-12 py-10 ">
+
+          {/* Heading */}
+
+          <div className="flex items-center justify-center gap-5 mb-16 w-full">
+
+            <img
+              src={lineLeftAbout}
+              alt=""
+              className="
+                hidden
+                md:block
+
+                flex-1
+
+                h-3
+                object-fill
+                min-w-0
+              "
+            />
+
+            <img
+              src={mentorsHeading}
+              alt="Mentors & Judges"
+              className="
+                w-[420px]
+                sm:w-[480px]
+                md:w-[640px]
+                lg:w-[840px]
+
+                h-auto
+                object-contain
+
+                shrink-0
+              "
+            />
+
+            <img
+              src={lineRightAbout}
+              alt=""
+              className="
+                hidden
+                md:block
+
+                flex-1
+
+                h-3
+                object-fill
+                min-w-0
+              "
+            />
+
+
+          </div>
+
+          {/* ================= Mentor Carousel ================= */}
+
+          <div className="mt-5 md:mt-25">
+
+            <Splide
+              extensions={{ AutoScroll }}
+              options={{
+                type: "loop",
+
+                perPage: 7,
+                gap: "24px",
+
+                arrows: true,
+                pagination: true,
+                drag: true,
+
+                autoWidth: false,
+
+                autoScroll: {
+                  autoStart: true,
+                  speed: 0.7,
+                  pauseOnHover: true,
+                  pauseOnFocus: true,
+                },
+
+                breakpoints: {
+                  1700: {
+                    perPage: 5,
+                    gap: "20px",
+                  },
+                  1200: {
+                    perPage: 4,
+                    gap: "36px",
+                  },
+
+                  900: {
+                    perPage: 3,
+                    gap: "32px",
+                  },
+
+                  640: {
+                    perPage: 2,
+                    gap: "24px",
+                  },
+
+                  480: {
+                    fixedWidth: "170px",
+                    focus: "center",
+                    gap: "16px",
+                    padding: "2.5rem",
+                    arrows: false,
+                    pagination: false,
+                  },
+                },
+              }}
+            >
+              {people.map((person) => (
+                <SplideSlide key={person.id}>
+
+                  <div className="flex justify-center mb-5">
+                    <PersonCard person={person} />
+                  </div>
+
+                </SplideSlide>
+              ))}
+            </Splide>
+
+          </div>
+
+        </div>
+
+        {/* ================ MENTORS END ================ */}
+
+      </section>
+
       {/* =============================================================== */}
       {/*                         SPONSORS                              */}
       {/* =============================================================== */}
+
       <section id="sponsors" className="relative w-full py-10 md:py-24 overflow-hidden">
 
         <div className="w-full px-4 md:px-8 lg:px-12">
@@ -1316,143 +1457,6 @@ export default function Home() {
           </div>
 
         </div>
-
-      </section>
-
-      {/* =============================================================== */}
-      {/*                    MENTORS / JUDGES                           */}
-      {/* =============================================================== */}
-      <section id="mentors" className="relative w-full">
-
-        {/* =============== MENTORS START =============== */}
-
-        <div className="w-full px-4 md:px-8 lg:px-12 py-10 ">
-
-          {/* Heading */}
-
-          <div className="flex items-center justify-center gap-5 mb-16 w-full">
-
-            <img
-              src={lineLeftAbout}
-              alt=""
-              className="
-                hidden
-                md:block
-
-                flex-1
-
-                h-3
-                object-fill
-                min-w-0
-              "
-            />
-
-            <img
-              src={mentorsHeading}
-              alt="Mentors & Judges"
-              className="
-                w-[420px]
-                sm:w-[480px]
-                md:w-[640px]
-                lg:w-[840px]
-
-                h-auto
-                object-contain
-
-                shrink-0
-              "
-            />
-
-            <img
-              src={lineRightAbout}
-              alt=""
-              className="
-                hidden
-                md:block
-
-                flex-1
-
-                h-3
-                object-fill
-                min-w-0
-              "
-            />
-
-
-          </div>
-
-          {/* ================= Mentor Carousel ================= */}
-
-          <div className="mt-5 md:mt-25">
-
-            <Splide
-              extensions={{ AutoScroll }}
-              options={{
-                type: "loop",
-
-                perPage: 7,
-                gap: "24px",
-
-                arrows: true,
-                pagination: true,
-                drag: true,
-
-                autoWidth: false,
-
-                autoScroll: {
-                  autoStart: true,
-                  speed: 0.7,
-                  pauseOnHover: true,
-                  pauseOnFocus: true,
-                },
-
-                breakpoints: {
-                  1700: {
-                    perPage: 5,
-                    gap: "20px",
-                  },
-                  1200: {
-                    perPage: 4,
-                    gap: "36px",
-                  },
-
-                  900: {
-                    perPage: 3,
-                    gap: "32px",
-                  },
-
-                  640: {
-                    perPage: 2,
-                    gap: "24px",
-                  },
-
-                  480: {
-                    fixedWidth: "170px",
-                    focus: "center",
-                    gap: "16px",
-                    padding: "2.5rem",
-                    arrows: false,
-                    pagination: false,
-                  },
-                },
-              }}
-            >
-              {people.map((person) => (
-                <SplideSlide key={person.id}>
-
-                  <div className="flex justify-center mb-5">
-                    <PersonCard person={person} />
-                  </div>
-
-                </SplideSlide>
-              ))}
-            </Splide>
-
-          </div>
-
-        </div>
-
-        {/* ================ MENTORS END ================ */}
 
       </section>
 
