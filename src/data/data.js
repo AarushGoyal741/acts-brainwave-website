@@ -44,6 +44,13 @@ import ekta from "../assets/sponsorsandmentors/ekta.jpg"
 import ritesh from "../assets/sponsorsandmentors/ritesh.jpg"
 import mudassir from "../assets/sponsorsandmentors/mudassir.jpg"
 
+import abhinav from "../assets/sponsorsandmentors/abhinav.jpg"
+import sai from "../assets/sponsorsandmentors/sai.png"
+import sandeep from "../assets/sponsorsandmentors/sandeep.jpg"
+import santosh from "../assets/sponsorsandmentors/santosh.jpg"
+import sarvesh from "../assets/sponsorsandmentors/sarvesh.jpg"
+import zhu from "../assets/sponsorsandmentors/zhu.png"
+
 import usFlag from "../assets/sponsorsandmentors/Flag_of_the_United_States.png"
 import indflag from "../assets/sponsorsandmentors/ind_flag.png"
 
@@ -391,7 +398,7 @@ export const people = [
     name: "Mohamamd Mudassir",
     role: "Mentor",
     description: "Support Engineer | Algorand",
-    image: mudassir,
+    image:   mudassir,
     linkedin: "https://www.linkedin.com/in/mohammad-mudassir-b788a41ab/",
     flag: indflag,
   },
@@ -402,6 +409,60 @@ export const people = [
     description: "Member of Technical Staff | OpenAI",
     image: liu,
     linkedin: "https://www.linkedin.com/in/tianhao-arthur-liu/",
+    flag: usFlag,
+  },
+  {
+    id: 22,
+    name: "Sai Rakshit Yerram",
+    role: "Mentor",
+    description: "Staff software engineer | Visa Inc",
+    image: sai,
+    linkedin: "https://www.linkedin.com/in/sai-rakshit-ba88a4114",
+    flag: usFlag,
+  },
+  {
+    id: 23,
+    name: "Abhinav Kumar Singh",
+    role: "Mentor",
+    description: "Applied AI Researcher | Interfaze",
+    image: abhinav,
+    linkedin: "https://abhinav.at",
+    flag: indflag,
+  },
+  {
+    id: 24,
+    name: "Ruide Zhu",
+    role: "Mentor",
+    description: "Founding Engineer, Infra & Research | Andromede AI",
+    image: zhu,
+    linkedin: "https://www.linkedin.com/in/ruide-zhu-8136b4192/",
+    flag: usFlag,
+  },
+  {
+    id: 25,
+    name: "Sarvesh Gupta",
+    role: "Mentor",
+    description: "Consulting Member of Technical Staff | Oracle",
+    image: sarvesh,
+    linkedin: "https://www.linkedin.com/in/guptasarvesh/",
+    flag: usFlag,
+  },
+  {
+    id: 26,
+    name: "Sandeep Belidhe",
+    role: "Mentor",
+    description: "Member of AI Architect – DevSecOps Engineering | AT&T",
+    image: sandeep,
+    linkedin: "www.linkedin.com/in/sandeepbel",
+    flag: usFlag,
+  },
+  {
+    id: 27,
+    name: "Santosh Jaini",
+    role: "Mentor",
+    description: "AI Database Engineer | Modivcare",
+    image: santosh,
+    linkedin: "linkedin.com/in/santosh2504j",
     flag: usFlag,
   },
 ];
