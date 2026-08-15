@@ -457,16 +457,16 @@ function PrizeSection() {
           />
 
           <img
-              src={box5}
-              alt="blockchain 1st Runner Up"
-              className="w-full max-w-[325px] h-auto ml-[3vw]"
-            />
+            src={box5}
+            alt="blockchain 1st Runner Up"
+            className="w-full max-w-[325px] h-auto ml-[3vw]"
+          />
 
-            <img
-              src={box6}
-              alt="blockchain 2nd Runner Up"
-              className="w-full max-w-[325px] h-auto ml-[4vw]"
-            />
+          <img
+            src={box6}
+            alt="blockchain 2nd Runner Up"
+            className="w-full max-w-[325px] h-auto ml-[4vw]"
+          />
 
         </div>
 
@@ -549,8 +549,8 @@ function PrizeSection() {
 
           </div>
 
+        </div>
       </div>
-     </div> 
 
     </section>
   );
@@ -1148,8 +1148,8 @@ export default function Home() {
       {/* REGISTRATION SECTION */}
       <RegistrationSection />
 
-      
-      
+
+
 
       {/* =============================================================== */}
       {/*                    MENTORS / JUDGES                           */}
@@ -1379,19 +1379,19 @@ export default function Home() {
             </div>
 
             {/* Bronze */}
-            {/* <div className="flex flex-col items-center gap-6 w-full">
-    <img
-      src={bronzeSponsorHeading}
-      alt="Bronze Sponsors"
-      className="w-[260px] md:w-[520px] h-auto"
-    />
+            <div className="flex flex-col items-center gap-6 w-full">
+              <img
+                src={bronzeSponsorHeading}
+                alt="Bronze Sponsors"
+                className="w-[260px] md:w-[520px] h-auto"
+              />
 
-    <div className="flex flex-wrap justify-center gap-10">
-      {bronzeSponsors.map((sponsor) => (
-        <SponsorLogo key={sponsor.id} sponsor={sponsor} />
-      ))}
-    </div>
-  </div> */}
+              <div className="flex flex-wrap justify-center gap-10">
+                {bronzeSponsors.map((sponsor) => (
+                  <SponsorLogo key={sponsor.id} sponsor={sponsor} />
+                ))}
+              </div>
+            </div>
 
             {/* ============== In-Kind Heading & Stationary Grid ============== */}
             <div className="flex flex-col items-center gap-6 w-full">
@@ -1420,11 +1420,11 @@ export default function Home() {
                 {communityPartners.map((sponsor) => (
                   <SponsorLogo key={sponsor.id} sponsor={sponsor} />
                 ))}
-              </div> 
+              </div>
             </div>
 
 
-            
+
 
             {/* Media */}
             <div className="flex flex-col items-center gap-6 w-full mt-10">

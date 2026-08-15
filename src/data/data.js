@@ -16,6 +16,8 @@ import unstop from "../assets/sponsorsandmentors/unstop.png"
 import tin from "../assets/sponsorsandmentors/tin.png"
 import daworld from "../assets/sponsorsandmentors/daworld.png"
 import ninja from "../assets/sponsorsandmentors/ninja.png"
+import heartz from "../assets/sponsorsandmentors/heartz.jpg"
+import kiro from "../assets/sponsorsandmentors/kiro.png"
 
 import liu from "../assets/sponsorsandmentors/Tianhao Liu.jpg"
 
@@ -50,6 +52,7 @@ import sandeep from "../assets/sponsorsandmentors/sandeep.jpg"
 import santosh from "../assets/sponsorsandmentors/santosh.jpg"
 import sarvesh from "../assets/sponsorsandmentors/sarvesh.jpg"
 import zhu from "../assets/sponsorsandmentors/zhu.png"
+import shiti from "../assets/sponsorsandmentors/shiti.jpg"
 
 import usFlag from "../assets/sponsorsandmentors/Flag_of_the_United_States.png"
 import indflag from "../assets/sponsorsandmentors/ind_flag.png"
@@ -106,9 +109,15 @@ export const silverSponsors = [
 export const bronzeSponsors = [
   {
     id: 1,
-    name: "MLH",
-    logo: googleLogo,
-    link: "#",
+    name: "Heartz",
+    logo: heartz,
+    link: "https://www.instagram.com/foodofheartz?igsh=M3c5MTA0Y2FmaTQ5&igsi=M3c5MTA0Y2FmaTQ5",
+  },
+  {
+    id: 2,
+    name: "Kiro",
+    logo: kiro,
+    link: "https://kiro.dev/",
   },
 ];
 
@@ -464,5 +473,14 @@ export const people = [
     image: santosh,
     linkedin: "linkedin.com/in/santosh2504j",
     flag: usFlag,
+  },
+  {
+    id: 28,
+    name: "Shiti Sharma",
+    role: "Mentor",
+    description: "Associate Software Developer | Antino",
+    image: shiti,
+    linkedin: "https://www.linkedin.com/in/shitisharma",
+    flag: indflag,
   },
 ];
