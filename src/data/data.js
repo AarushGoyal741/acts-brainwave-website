@@ -18,6 +18,7 @@ import daworld from "../assets/sponsorsandmentors/daworld.png"
 import ninja from "../assets/sponsorsandmentors/ninja.png"
 import heartz from "../assets/sponsorsandmentors/heartz.jpg"
 import kiro from "../assets/sponsorsandmentors/kiro.png"
+import backstage from "../assets/sponsorsandmentors/backstage.png"
 
 import liu from "../assets/sponsorsandmentors/Tianhao Liu.jpg"
 
@@ -119,6 +120,13 @@ export const bronzeSponsors = [
     logo: kiro,
     link: "https://kiro.dev/",
   },
+  {
+    id: 3,
+    name: "Backstage",
+    logo: backstage,
+    link: "https://www.mybackstage.in/",
+  },
+  
 ];
 
 export const eduSponsors = [

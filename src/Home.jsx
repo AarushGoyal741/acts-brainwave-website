@@ -788,7 +788,7 @@ function RegistrationSection() {
 
 // ===== Main page =====
 export default function Home() {
-  const targetDate = new Date("August 21, 2026 00:00:00").getTime();
+  const targetDate = new Date("August 22, 2026 00:00:00").getTime();
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
